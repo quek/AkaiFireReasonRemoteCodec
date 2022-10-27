@@ -1,0 +1,127 @@
+Propellerhead Remote Mapping File
+File Format Version	1.0.0
+Control Surface Manufacturer	Akai
+Control Surface Model	Fire
+Map Version	0.0.1
+
+//This is a remote map template for the Akai MPKmini and Record 1.5 / Reason 5.0
+//It is based on the Akai MPK49 Remote Map.
+//This is meant to work with the keyboard on MIDI channel 1
+
+
+Scope	Propellerheads	Master Keyboard
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Keyboard		Keyboard
+
+
+/////////////////////////////////////////////////////////////////////////////
+Scope	Propellerheads	Reason Master Section
+Define Group	Variation	Master	Comp	LPF	HF	HMF	LMF	LF	Send1-4	Send5-8
+// -> Control Surface Item -> Key -> Remotable Item -> Scale -> Mode -> Group
+Map	Mode		Variation=Master
+Map	PatternDown		Variation=Master			Send5-8
+Map	PatternDown		Variation=Comp			Master
+Map	PatternDown		Variation=LPF			Comp
+Map	PatternDown		Variation=HF			LPF
+Map	PatternDown		Variation=HMF			HF
+Map	PatternDown		Variation=LMF			HMF
+Map	PatternDown		Variation=LF			LMF
+Map	PatternDown		Variation=Send1-4			LF
+Map	PatternDown		Variation=Send5-8			Send1-4
+Map	PatternUp		Variation=Send5-8			Master
+Map	PatternUp		Variation=Send1-4			Send5-8
+Map	PatternUp		Variation=LF			Send1-4
+Map	PatternUp		Variation=LMF			LF
+Map	PatternUp		Variation=HMF			LMF
+Map	PatternUp		Variation=HF			HMF
+Map	PatternUp		Variation=LPF			HF
+Map	PatternUp		Variation=Comp			LPF
+Map	PatternUp		Variation=Master			Comp
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Knob 1		Channel 1 Level			Master
+Map	Knob 2		Channel 1 Width			Master
+Map	Knob 3		Channel 1 Pan			Master
+Map	Knob 4		Channel 1 Input Gain			Master
+Map	Knob 1		Channel 1 C Ratio			Comp
+Map	Knob 2		Channel 1 C Threshold			Comp
+Map	Knob 3		Channel 1 C Rel			Comp
+Map	GridLeft		Channel 1 Comp On			Comp
+Map	Knob 1		Channel 1 LPF Frequency			LPF
+Map	Knob 2		Channel 1 HPF Frequency			LPF
+Map	GridLeft		Channel 1 LPF On			LPF
+Map	GridRight		Channel 1 HPF On			LPF
+Map	Knob 1		Channel 1 HF Gain			HF
+Map	Knob 2		Channel 1 HF Frequency			HF
+Map	GridLeft		Channel 1 EQ On			HF
+Map	GridRight		Channel 1 HF Bell			HF
+Map	Knob 1		Channel 1 HMF Gain			HMF
+Map	Knob 2		Channel 1 HMF Frequency			HMF
+Map	Knob 3		Channel 1 HMF Q			HMF
+Map	GridLeft		Channel 1 EQ On			HMF
+Map	GridRight		Channel 1 EQ E Mode			HMF
+Map	Knob 1		Channel 1 LMF Gain			LMF
+Map	Knob 2		Channel 1 LMF Frequency			LMF
+Map	Knob 3		Channel 1 LMF Q			LMF
+Map	GridLeft		Channel 1 EQ On			LMF
+Map	GridRight		Channel 1 EQ E Mode			LMF
+Map	Knob 1		Channel 1 LF Gain			LF
+Map	Knob 2		Channel 1 LF Frequency			LF
+Map	GridLeft		Channel 1 EQ On			LF
+Map	GridRight		Channel 1 LF Bell			LF
+Map	Knob 1		Channel 1 FX1 Send Level			Send1-4
+Map	Knob 2		Channel 1 FX2 Send Level			Send1-4
+Map	Knob 3		Channel 1 FX3 Send Level			Send1-4
+Map	Knob 4		Channel 1 FX4 Send Level			Send1-4
+Map	Knob 1		Channel 1 FX5 Send Level			Send5-8
+Map	Knob 2		Channel 1 FX6 Send Level			Send5-8
+Map	Knob 3		Channel 1 FX7 Send Level			Send5-8
+Map	Knob 4		Channel 1 FX8 Send Level			Send5-8
+Map	MuteSolo1		Channel 1 Mute
+Map	MuteSolo2		Channel 1 Solo
+
+/////////////////////////////////////////////////////////////////////////////
+Scope	Propellerheads	Record Master Section
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+// 1-8 controls eight channels
+Map	Knob 1		Channel 1 Level
+Map	Knob 2		Channel 2 Level
+Map	Knob 3		Channel 3 Level
+Map	Knob 4		Channel 4 Level
+
+/////////////////////////////////////////////////////////////////////////////
+Scope	Propellerheads	Reason Main Mixer Channel
+Define Group	Keyboard Shortcut Variations	Inserts	EQ	FX Sends	Dyn
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Knob 1		Level
+Map	Knob 2		Pan
+// Map	Knob 1		Input Gain
+// Map	Knob 2		C Ratio
+// Map	Knob 3		C Threshold
+// Map	Knob 4		C Release
+// Map	Knob 5		LPF Frequency
+// Map	Knob 6		HPF Frequency
+// Map	Slider 1		Level
+
+/////////////////////////////////////////////////////////////////////////////
+Scope	Propellerheads	Mixer 14:2
+Define Group	Keyboard Shortcut Variations	Levels Pan Mutes1 1-14	Levels Sends Mutes1 1-14	Levels Sends Mutes2 1-14	Levels Sends Mutes3 1-14	Levels Sends Mutes4 1-14
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Knob 1		Channel 1 Level			Levels Pan Mutes1 1-14
+Map	Knob 2		Channel 2 Level			Levels Pan Mutes1 1-14
+Map	Knob 3		Channel 3 Level			Levels Pan Mutes1 1-14
+Map	Knob 4		Channel 4 Level			Levels Pan Mutes1 1-14
+
+
+Scope	Propellerheads	Line Mixer 6:2
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Knob 1		Channel 1 Level
+Map	Knob 2		Channel 2 Level
+Map	Knob 3		Channel 3 Level
+Map	Knob 4		Channel 4 Level
+
+
+Scope	Propellerheads	Record Main Mixer Channel
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Knob 1		Level
+Map	Knob 2		Pan
+Map	Knob 3		Width

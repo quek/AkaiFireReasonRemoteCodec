@@ -1,0 +1,15 @@
+version={0,0,4}
+
+function remote_supported_control_surfaces()
+    local surfaces = {
+        { manufacturer="Akai", model="Fire",
+          source="Fire.lua", picture="Fire.png",
+          in_ports={{description="In Port"}},
+          out_ports={{description="Out Port", optional=true}},
+          has_keyboard=true,
+          setup_info_text="",
+          setup_user_action_text=""
+        },
+    }
+    return surfaces
+end
